@@ -16,26 +16,26 @@ let correctAnswers;
 let candidateAnswers;
 
 
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  let candidateName = input.question("Please Type Your Name Here");
+  candidateName = input.question("Please Type Your Name Here:");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  candidateAnswer = input.question(question)
-
+  candidateAnswer = input.question(question);
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  if (candidateAnswer === correctAnswer){
-    console.log("That is correct!")
+  if (candidateAnswer === correctAnswer) {
+    console.log("That is correct!");
   } else {
-    console.log("That's incorrect!")
+    console.log("That is Incorrect");
   }
+
+
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
@@ -45,7 +45,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hello,", candidateName);
+  console.log("Hello,",candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
